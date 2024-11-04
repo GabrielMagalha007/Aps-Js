@@ -1,3 +1,12 @@
+Aps: Java Script 
+Codigo da turma:  121-94353
+Nome: Gabriel Magalhães de Oliveira e Anderson da Silva Linhares 
+Matricula: 2024101609 e 2024101706 
+
+
+
+
+
 Descrição do Trabalho
 O objetivo deste exercício é praticar o uso de funções, iterações e condicionais em JavaScript para
 encontrar os 10 maiores números primos a partir de um número fornecido pelo usuário. Faça:
@@ -8,30 +17,33 @@ primos.
 
 
 // solicitando o comando para o usuario 
-const numeroUsuario = parseInt(prompt("Digite um número para encontrar os 10 maiores primos a partir dele:"));
-const quantidadePrimos = 10;
+const numUsuario = parseInt(prompt("Digite um número para encontrar os 10 maiores primos a partir dele:"))
+const quantidaPrimos = 10
 
-const maioresPrimos = encontrarMaioresPrimosApos(numeroUsuario, quantidadePrimos);
-console.log(`Os ${quantidadePrimos} primeiros números primos após ${numeroUsuario} são:`, maioresPrimos);
+const maioresPrimos = encontrarMaioresPrimosApos(numUsuario, quantidaPrimos)
+console.log(`Os ${quantidaPrimos} primeiros números primos após ${numUsuario} são:`, maioresPrimos)
 
 function ehPrimo(num) { // usando a função ehPrimo 
     if (num <= 1) return false; // Números menores ou iguais a 1 não são primos
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false; // Se divisível por qualquer i, não é primo
+    for (let i = 2; i <= Math.sqrt(num) i++) {
+        if (num % i === 0) return false // Se divisível por qualquer i, não é primo
     }
-    return true; // Se não encontrar divisores, é primo
+    return true // Se não encontrar divisores, é primo
 }
 
 function encontrarMaioresPrimosApos(n, quantidade) {
-    const primos = [];
-    let numeroAtual = n + 1; // Começa a verificação do número 
+    const primos = []
+    let numAtual = n + 1 // Começa a verificação do número 
 
     while (primos.length < quantidade) {
-        if (ehPrimo(numeroAtual)) {
-            primos.push(numeroAtual); // Adiciona o número primo à lista
+        if (ehPrimo(numAtual)) {
+            primos.push(numAtual) // Adiciona o número primo à lista
         }
-        numeroAtual++; // Avança para o próximo número
+        numAtual++ // Avança para o próximo número
     }
 
-    return primos; // Retorna a lista dos primos encontrados
+    return primos // Retorna a lista dos primos encontrados
 }
+
+
+
